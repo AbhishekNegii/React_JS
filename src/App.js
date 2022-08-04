@@ -1,15 +1,23 @@
-import ExpenseItem from "./Component/ExpenseItem";
-function App() {
+import React from "react";
+
+import Card from "./Component/UI/Card";
+
+import Expenses from "./Component/Expense/Expenses";
+
+const App= ()=> {
   const expenses = [
     {
       id: "e1",
-      title: "Toilet Paper",
-      amount: 94.12,
+      title: "New TV",      
+      amount: 799.12,
       date: new Date(2020, 7, 14),
       location: "Dehradun",
     },
 
-    { id: "e2", title: "New TV", amount: 799.49, date: new Date(2021, 2, 12) },
+    { id: "e2", 
+      title: "Toilet Paper",
+      amount: 94.49, 
+      date: new Date(2021, 2, 12) },
 
     {
       id: "e3",
@@ -27,19 +35,9 @@ function App() {
   ];
  
   return (
-    <div>
-      <h2>Let's get started!</h2>
-      { 
-          expenses.map((expense) => (
-          <ExpenseItem
-              key={expense.id}
-              title={expense.title}
-              amount={expense.amount}
-              location={expense.location}
-              date={expense.date}
-          > </ExpenseItem>
-      ))}
-    </div>
+    <Card>
+         <Expenses item={expenses}/>           
+    </Card>
   );
 }
 export default App;
