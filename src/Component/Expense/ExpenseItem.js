@@ -1,4 +1,4 @@
-import React from "react";
+import React , { useState } from "react";
 
 import "./ExpenseItem.css";
 import ExpenseDate from "./ExpenseDate";
@@ -6,17 +6,21 @@ import ExpenseDetails from "./ExpenseDetails"
 
 // import Card from "../UI/Card";
 
-const ExpenseItem=(props)=> { 
-  const eventHandler = () =>{
-    let ele=document.querySelector('.expense-item');
-    ele.parentNode.removeChild(ele);
+const ExpenseItem=(props)=> {
+  
+  const [amount, newAmount]=useState(props.amount)
+  
+  const clickHandler = () =>{
+    newAmount('$ 100')
+        // let ele=document.querySelector('.expense-item');
+    // ele.parentNode.removeChild(ele);
   }
   return ( 
     <div className="expense-item">
       <ExpenseDate date={props.date}/>
       <ExpenseDetails title ={props.title}/>
-      <ExpenseDetails amount= {props.amount}/>  
-      <button onClick={eventHandler}>Delete</button>    
+      <ExpenseDetails amount= {amount}/>  
+      <button onClick={clickHandler}>Amount Change</button>    
     </div>
     
   );
