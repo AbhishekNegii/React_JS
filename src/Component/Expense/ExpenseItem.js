@@ -7,8 +7,15 @@ import ExpenseDetails from "./ExpenseDetails"
 // import Card from "../UI/Card";
 
 const ExpenseItem=(props)=> {
+
+  // const[newTitle, setNewTitle]= useState("");
   
-  const [amount, newAmount]=useState(props.amount)
+  const [amount, newAmount]=useState(props.amount);
+
+  // const changeHandler =() =>{
+  //   setNewTitle(newTitle);
+  // }
+  
   
   const clickHandler = () =>{
     newAmount('$ 100')
@@ -20,6 +27,7 @@ const ExpenseItem=(props)=> {
       <ExpenseDate date={props.date}/>
       <ExpenseDetails title ={props.title}/>
       <ExpenseDetails amount= {amount}/>  
+      {/* <input type="text" onChange={changeHandler} /> */}
       <button onClick={clickHandler}>Amount Change</button>    
     </div>
     
