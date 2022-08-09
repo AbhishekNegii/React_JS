@@ -8,20 +8,20 @@ const ExpensesList=(props)=>{
         return <h2 className='expenses-list__fallback'>Found no expense!!!</h2>
        }
     //    else if (props.item.length === 1){
+    //     const content = props.item.map(expense => (
+    //         <ExpenseItem
+    //             key={expense.id}
+    //             title={expense.title}
+    //             amount={expense.amount}
+    //             // location={expense.location}
+    //             date={expense.date}
+    //         />
+    //     ))  
+    //     content = [...content,<p2>hi </p2>]  
     //     return(
-    //         <ul className='expense-list'>
-            
-    //             const content = { props.item.map(expense => (
-    //                     <ExpenseItem
-    //                         key={expense.id}
-    //                         title={expense.title}
-    //                         amount={expense.amount}
-    //                         // location={expense.location}
-    //                         date={expense.date}
-    //                     />
-    //                 ))
-    //             }
-    //              content = [...content,<p2>hi </p2>]
+    //         <ul className='expense-list'>           
+                
+                 
     //         </ul>
     //      )
     //    } 
